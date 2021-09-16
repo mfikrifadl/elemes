@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
 import { Row } from 'react-bootstrap'
-import { Hero } from './components'
+import { Hero, Categories } from './components'
 
 export default class App extends Component {
   render() {
     return (
       <div>
         <Hero />
-        <Row>
-          <h5>ok</h5>
-        </Row>
+        <Categories />
       </div>
     )
   }

@@ -43,10 +43,30 @@ body {
   background-color: #E7462D !important;
 }
 
+.img-category {
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
+
 .txt-primary {
   color: #8BAC3E;
   font-weight: 500;
   line-height: 64px;
+}
+
+.txt-title {
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 50px;
+}
+
+.card-category {
+  margin-right: 10px;
+  height: 175px;
+  border-radius: 8px;
 }
 
 .txt-light {
