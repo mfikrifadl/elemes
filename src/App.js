@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Row } from 'react-bootstrap'
-import { Hero, Categories } from './components'
+import { Hero, Categories, Trendings } from './components'
 
 export default class App extends Component {
   render() {
@@ -8,6 +7,7 @@ export default class App extends Component {
       <div>
         <Hero />
         <Categories />
+        <Trendings />
       </div>
     )
   }
