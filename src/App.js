@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Hero, Categories, Trendings } from './components'
+import { Hero, Categories, Trendings, Footer } from './components'
 
 export default class App extends Component {
   render() {
@@ -8,6 +8,7 @@ export default class App extends Component {
         <Hero />
         <Categories />
         <Trendings />
+        <Footer />
       </div>
     )
   }
