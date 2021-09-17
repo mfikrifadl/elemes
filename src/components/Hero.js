@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./Navbar";
 import { Container, Row, Col, Button } from "react-bootstrap";
 
 const Hero = () => {
@@ -21,7 +20,7 @@ const Hero = () => {
                   Daftar Sekarang
                 </Button>
                 <Button variant="light" style={{ marginLeft: "10px" }}>
-                  About
+                  About Us
                 </Button>
               </Col>
             </Col>
