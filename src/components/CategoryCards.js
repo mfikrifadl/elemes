@@ -9,6 +9,7 @@ export default class PreviousNextMethods extends Component {
     this.previous = this.previous.bind(this);
   }
   next() {
+    console.log(this.slider);
     this.slider.slickNext();
   }
   previous() {
@@ -29,130 +30,82 @@ export default class PreviousNextMethods extends Component {
       slidesToShow: 2,
       slidesToScroll: 3,
     };
+
+    const categories = [
+      {
+        id: 1,
+        title: "Cupcake",
+        quantity: 22,
+        color: "#F0FEEB",
+        photo: "cupcake.png",
+      },
+      {
+        id: 2,
+        title: "Pizza",
+        quantity: 25,
+        color: "#E4F2F4",
+        photo: "pizza.png",
+      },
+      {
+        id: 3,
+        title: "Kebab",
+        quantity: 12,
+        color: "#EAEEFA",
+        photo: "kebab.png",
+      },
+      {
+        id: 4,
+        title: "Salmon",
+        quantity: 22,
+        color: "#F9EEF3",
+        photo: "salmon.png",
+      },
+      {
+        id: 5,
+        title: "Doughnut",
+        quantity: 25,
+        color: "#F3F7D9",
+        photo: "doughnut.png",
+      },
+      {
+        id: 6,
+        title: "Cupcake",
+        quantity: 22,
+        color: "#F0FEEB",
+        photo: "cupcake.png",
+      },
+    ];
     return (
       <div>
         <div className="d-none d-md-block">
           <Slider ref={(c) => (this.slider = c)} {...settings}>
-            <div key={1}>
-              <Card
-                className="text-center card-category"
-                style={{ backgroundColor: "#F0FEEB", borderColor: "#F0FEEB" }}
-              >
-                <Card.Body>
-                  <Card.Title>
-                    <img
-                      src="assets/food/cupcake.png"
-                      className="img-category"
-                    />
-                  </Card.Title>
-                  <Card.Text className="mt-4">
-                    <h6>
-                      <strong>Cupcakes</strong>
-                    </h6>
-                    <h6>22 items</h6>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-            <div key={2}>
-              <Card
-                className="text-center card-category"
-                style={{ backgroundColor: "#E4F2F4", borderColor: "#E4F2F4" }}
-              >
-                <Card.Body>
-                  <Card.Title>
-                    <img src="assets/food/pizza.png" className="img-category" />
-                  </Card.Title>
-                  <Card.Text className="mt-4">
-                    <h6>
-                      <strong>Pizza</strong>
-                    </h6>
-                    <h6>25 items</h6>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-            <div key={3}>
-              <Card
-                className="text-center card-category"
-                style={{ backgroundColor: "#EAEEFA", borderColor: "#EAEEFA" }}
-              >
-                <Card.Body>
-                  <Card.Title>
-                    <img src="assets/food/kebab.png" className="img-category" />
-                  </Card.Title>
-                  <Card.Text className="mt-4">
-                    <h6>
-                      <strong>kebab</strong>
-                    </h6>
-                    <h6>12 items</h6>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-            <div key={4}>
-              <Card
-                className="text-center card-category"
-                style={{ backgroundColor: "#F9EEF3", borderColor: "#F9EEF3" }}
-              >
-                <Card.Body>
-                  <Card.Title>
-                    <img
-                      src="assets/food/salmon.png"
-                      className="img-category"
-                    />
-                  </Card.Title>
-                  <Card.Text className="mt-4">
-                    <h6>
-                      <strong>Salmon</strong>
-                    </h6>
-                    <h6>22 items</h6>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-            <div key={5}>
-              <Card
-                className="text-center card-category"
-                style={{ backgroundColor: "#F3F7D9", borderColor: "#F3F7D9" }}
-              >
-                <Card.Body>
-                  <Card.Title>
-                    <img
-                      src="assets/food/doughnut.png"
-                      className="img-category"
-                    />
-                  </Card.Title>
-                  <Card.Text className="mt-4">
-                    <h6>
-                      <strong>Doughnut</strong>
-                    </h6>
-                    <h6>11 items</h6>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-            <div key={6}>
-              <Card
-                className="text-center card-category"
-                style={{ backgroundColor: "#F0FEEB", borderColor: "#F0FEEB" }}
-              >
-                <Card.Body>
-                  <Card.Title>
-                    <img
-                      src="assets/food/cupcake.png"
-                      className="img-category"
-                    />
-                  </Card.Title>
-                  <Card.Text className="mt-4">
-                    <h6>
-                      <strong>Cupcakes</strong>
-                    </h6>
-                    <h6>22 items</h6>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
+            {categories &&
+              categories.map((category) => (
+                <div key={category.id}>
+                  <Card
+                    className="text-center card-category card-category-desktop"
+                    style={{
+                      backgroundColor: category.color,
+                      borderColor: category.color,
+                    }}
+                  >
+                    <Card.Body>
+                      <Card.Title>
+                        <img
+                          src={"assets/food/" + category.photo}
+                          className="img-category"
+                        />
+                      </Card.Title>
+                      <Card.Text className="mt-4">
+                        <h6>
+                          <strong>{category.title}</strong>
+                        </h6>
+                        <h6>{category.quantity} items</h6>
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </div>
+              ))}
           </Slider>
           <div
             style={{ textAlign: "center", marginTop: "40px", float: "right" }}
@@ -172,127 +125,34 @@ export default class PreviousNextMethods extends Component {
           </div>
         </div>
         <div className="d-sm-block d-md-none">
-          <Slider ref={(c) => (this.slider = c)} {...settingsMobile}>
-            <div key={1}>
-              <Card
-                className="text-center card-category"
-                style={{ backgroundColor: "#F0FEEB", borderColor: "#F0FEEB" }}
-              >
-                <Card.Body>
-                  <Card.Title>
-                    <img
-                      src="assets/food/cupcake.png"
-                      className="img-category"
-                    />
-                  </Card.Title>
-                  <Card.Text className="mt-4">
-                    <h6>
-                      <strong>Cupcakes</strong>
-                    </h6>
-                    <h6>22 items</h6>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-            <div key={2}>
-              <Card
-                className="text-center card-category"
-                style={{ backgroundColor: "#E4F2F4", borderColor: "#E4F2F4" }}
-              >
-                <Card.Body>
-                  <Card.Title>
-                    <img src="assets/food/pizza.png" className="img-category" />
-                  </Card.Title>
-                  <Card.Text className="mt-4">
-                    <h6>
-                      <strong>Pizza</strong>
-                    </h6>
-                    <h6>25 items</h6>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-            <div key={3}>
-              <Card
-                className="text-center card-category"
-                style={{ backgroundColor: "#EAEEFA", borderColor: "#EAEEFA" }}
-              >
-                <Card.Body>
-                  <Card.Title>
-                    <img src="assets/food/kebab.png" className="img-category" />
-                  </Card.Title>
-                  <Card.Text className="mt-4">
-                    <h6>
-                      <strong>kebab</strong>
-                    </h6>
-                    <h6>12 items</h6>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-            <div key={4}>
-              <Card
-                className="text-center card-category"
-                style={{ backgroundColor: "#F9EEF3", borderColor: "#F9EEF3" }}
-              >
-                <Card.Body>
-                  <Card.Title>
-                    <img
-                      src="assets/food/salmon.png"
-                      className="img-category"
-                    />
-                  </Card.Title>
-                  <Card.Text className="mt-4">
-                    <h6>
-                      <strong>Salmon</strong>
-                    </h6>
-                    <h6>22 items</h6>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-            <div key={5}>
-              <Card
-                className="text-center card-category"
-                style={{ backgroundColor: "#F3F7D9", borderColor: "#F3F7D9" }}
-              >
-                <Card.Body>
-                  <Card.Title>
-                    <img
-                      src="assets/food/doughnut.png"
-                      className="img-category"
-                    />
-                  </Card.Title>
-                  <Card.Text className="mt-4">
-                    <h6>
-                      <strong>Doughnut</strong>
-                    </h6>
-                    <h6>11 items</h6>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-            <div key={6}>
-              <Card
-                className="text-center card-category"
-                style={{ backgroundColor: "#F0FEEB", borderColor: "#F0FEEB" }}
-              >
-                <Card.Body>
-                  <Card.Title>
-                    <img
-                      src="assets/food/cupcake.png"
-                      className="img-category"
-                    />
-                  </Card.Title>
-                  <Card.Text className="mt-4">
-                    <h6>
-                      <strong>Cupcakes</strong>
-                    </h6>
-                    <h6>22 items</h6>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
+          <Slider {...settingsMobile}>
+            {categories &&
+              categories.map((category) => (
+                <div key={category.id}>
+                  <Card
+                    className="text-center card-category"
+                    style={{
+                      backgroundColor: category.color,
+                      borderColor: category.color,
+                    }}
+                  >
+                    <Card.Body>
+                      <Card.Title>
+                        <img
+                          src={"assets/food/" + category.photo}
+                          className="img-category"
+                        />
+                      </Card.Title>
+                      <Card.Text className="mt-4">
+                        <h6>
+                          <strong>{category.title}</strong>
+                        </h6>
+                        <h6>{category.quantity} items</h6>
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </div>
+              ))}
           </Slider>
         </div>
       </div>

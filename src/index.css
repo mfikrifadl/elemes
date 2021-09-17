@@ -161,3 +161,7 @@ h4 {
 .navbar {
     background-color: #fff;
 }
+
+.card-category-desktop:hover{
+ height: 195px;
+}
