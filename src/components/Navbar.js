@@ -45,8 +45,12 @@ const NavbarComponent = () => {
         </Navbar>
       </div>
       <div className="d-sm-block d-md-none">
-        <Navbar expand="lg" fixed="top">
-          <Navbar.Brand href="#" style={{ marginLeft: "50px" }}>
+        <Navbar
+          expand="lg"
+          fixed="top"
+          style={{ padding: "10px 20px 10px 20px" }}
+        >
+          <Navbar.Brand href="#">
             <img
               src="assets/logo/logo.png"
               className="d-inline-block align-top"
