@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Row, Card, Button, Image } from "react-bootstrap";
+import parse from 'html-react-parser';
 const TrendingCards = () => {
   const color = {
     Pizza: "#F0FEEB",
@@ -14,52 +15,74 @@ const TrendingCards = () => {
       title: "Pizza Paperoni",
       category: "Pizza",
       photo: "pizza-paperoni.png",
+      star: 4,
     },
     {
       id: 2,
       title: "Pizza Meat",
       category: "Pizza",
       photo: "pizza-meat.png",
+      star: 3,
     },
     {
       id: 3,
       title: "Doner Kebab",
       category: "Kebab",
       photo: "doner-kebab.png",
-    },
-    {
-      id: 3,
-      title: "Salmon Roll",
-      category: "Salmon",
-      photo: "salmon-roll.png",
+      star: 5,
     },
     {
       id: 4,
-      title: "Cupcake Choco",
-      category: "Cupcake",
-      photo: "cupcake-choco.png",
+      title: "Salmon Roll",
+      category: "Salmon",
+      photo: "salmon-roll.png",
+      star: 4,
     },
     {
       id: 5,
-      title: "Doughnut Milk",
-      category: "Doughnut",
-      photo: "doughnut-milk.png",
+      title: "Cupcake Choco",
+      category: "Cupcake",
+      photo: "cupcake-choco.png",
+      star: 4,
     },
     {
       id: 6,
-      title: "Doughnut Unicorn",
+      title: "Doughnut Milk",
       category: "Doughnut",
-      photo: "doughnut-unicorn.png",
+      photo: "doughnut-milk.png",
+      star: 5,
     },
     {
       id: 7,
+      title: "Doughnut Unicorn",
+      category: "Doughnut",
+      photo: "doughnut-unicorn.png",
+      star: 4,
+    },
+    {
+      id: 8,
       title: "Kathi Kebab",
       category: "Kebab",
       photo: "kathi-kebab.png",
+      star: 4,
     },
   ];
+
+  const stars = []
+
+  for (const [index, value] of trendings.entries()) {
+    stars[value.id] = '';
+    for (let i = 0; i < value.star; i++) {
+      stars[value.id] += '<Image src="assets/icon/star-active.png" className="star-trending" />'
+    }
+    for (let y = 0; y < (5 - value.star); y++) {
+      stars[value.id] += '<Image src="assets/icon/star-disabled.png" className="star-trending" />'
+    }
+  }
+
+  console.log(stars)
   return (
-    <div>
+    < div >
       <div className="d-none d-md-block">
         <Row>
           {trendings &&
@@ -83,10 +106,7 @@ const TrendingCards = () => {
                     <Card.Subtitle className="mt-2 txt-sub-trending">
                       {trending.category}
                     </Card.Subtitle>
-                    <Image
-                      src="assets/logo/4-stars.png"
-                      className="star-trending"
-                    />
+                    {parse(stars[trending.id])}
                   </Card.Body>
                 </Card>
               </Col>
@@ -119,17 +139,14 @@ const TrendingCards = () => {
                     <Card.Subtitle className="mt-2 txt-sub-trending">
                       {trending.category}
                     </Card.Subtitle>
-                    <Image
-                      src="assets/logo/4-stars.png"
-                      className="star-trending"
-                    />
+                    {parse(stars[trending.id])}
                   </Card.Body>
                 </Card>
               </Col>
             ))}
         </Row>
       </div>
-    </div>
+    </div >
   );
 };
 
