@@ -3,7 +3,7 @@ import { Nav, Navbar, Container, Badge, Button, Image } from "react-bootstrap";
 const NavbarComponent = () => {
   return (
     <div>
-      <div className="d-none d-md-block">
+      <div className="d-none d-lg-block">
         <Navbar fixed="top" >
           <Container>
             <Navbar.Brand href="#">
@@ -44,10 +44,10 @@ const NavbarComponent = () => {
           </Container>
         </Navbar>
       </div>
-      <div className="d-sm-block d-md-none">
+      <div className="d-sm-block d-md-block d-lg-none">
         <Navbar
           expand="lg"
-          fixed="top"
+          sticky="top"
           style={{ padding: "10px 20px 10px 20px" }}
         >
           <Navbar.Brand href="#">
