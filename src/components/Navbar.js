@@ -55,6 +55,7 @@ const NavbarComponent = () => {
               src="assets/logo/logo.png"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
+              width="150"
             />
           </Navbar.Brand>
           <Navbar.Brand href="#">
