@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import { Button, Card } from "react-bootstrap";
+import { Button, Card, Image } from "react-bootstrap";
 
 export default class PreviousNextMethods extends Component {
   constructor(props) {
@@ -90,7 +90,7 @@ export default class PreviousNextMethods extends Component {
                   >
                     <Card.Body>
                       <Card.Title>
-                        <img
+                        <Image
                           src={"assets/food/" + category.photo}
                           className="img-category"
                         />
@@ -114,12 +114,12 @@ export default class PreviousNextMethods extends Component {
               style={{ marginRight: "10px" }}
               onClick={this.previous}
             >
-              <img src="assets/logo/prev.png" style={{ marginRight: "5px" }} />
+              <Image src="assets/logo/prev.png" style={{ marginRight: "5px" }} />
               PREV
             </Button>
             <Button className="btn-primary" onClick={this.next}>
               NEXT
-              <img src="assets/logo/next.png" style={{ marginLeft: "5px" }} />
+              <Image src="assets/logo/next.png" style={{ marginLeft: "5px" }} />
             </Button>
           </div>
         </div>
@@ -137,7 +137,7 @@ export default class PreviousNextMethods extends Component {
                   >
                     <Card.Body>
                       <Card.Title>
-                        <img
+                        <Image
                           src={"assets/food/" + category.photo}
                           className="img-category"
                         />

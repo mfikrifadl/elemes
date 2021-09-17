@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row, Card, Button } from "react-bootstrap";
+import { Col, Row, Card, Button, Image } from "react-bootstrap";
 const TrendingCards = () => {
   const color = {
     Pizza: "#F0FEEB",
@@ -73,7 +73,7 @@ const TrendingCards = () => {
                   }}
                 >
                   <Card.Body>
-                    <img
+                    <Image
                       src={"assets/food/" + trending.photo}
                       className="img-trending"
                     />
@@ -83,7 +83,7 @@ const TrendingCards = () => {
                     <Card.Subtitle className="mt-2 txt-sub-trending">
                       {trending.category}
                     </Card.Subtitle>
-                    <img
+                    <Image
                       src="assets/logo/4-stars.png"
                       className="star-trending"
                     />
@@ -109,7 +109,7 @@ const TrendingCards = () => {
                   }}
                 >
                   <Card.Body>
-                    <img
+                    <Image
                       src={"assets/food/" + trending.photo}
                       className="img-trending"
                     />
@@ -119,7 +119,7 @@ const TrendingCards = () => {
                     <Card.Subtitle className="mt-2 txt-sub-trending">
                       {trending.category}
                     </Card.Subtitle>
-                    <img
+                    <Image
                       src="assets/logo/4-stars.png"
                       className="star-trending"
                     />

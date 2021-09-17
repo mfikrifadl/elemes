@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button, Image } from "react-bootstrap";
 
 const Hero = () => {
   return (
@@ -25,7 +25,7 @@ const Hero = () => {
               </Col>
             </Col>
             <Col md={6} xs={12}>
-              <img src="assets/food/hero.png" alt="Food Hero" />
+              <Image src="assets/food/hero.png" alt="Food Hero" />
             </Col>
           </Row>
         </Container>
@@ -36,7 +36,7 @@ const Hero = () => {
           <Row style={{ marginTop: "100px" }}>
             <h1 className="txt-primary">Good Food Us</h1>
             <h1 className="txt-primary">Good Mood</h1>
-            <img src="assets/food/hero-mobile.png" alt="Food Hero" />
+            <Image src="assets/food/hero-mobile.png" alt="Food Hero" />
             <h4 className="mt-4 txt-light">
               I would think that conserving our natural resources should be a
               conservative position: Not to waste food, and not to throw away a

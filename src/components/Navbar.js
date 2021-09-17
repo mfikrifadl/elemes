@@ -1,13 +1,13 @@
 import React from "react";
-import { Nav, Navbar, Container, Badge, Button } from "react-bootstrap";
+import { Nav, Navbar, Container, Badge, Button, Image } from "react-bootstrap";
 const NavbarComponent = () => {
   return (
     <div>
       <div className="d-none d-md-block">
-        <Navbar fixed="top">
+        <Navbar fixed="top" >
           <Container>
             <Navbar.Brand href="#">
-              <img
+              <Image
                 src="assets/logo/logo.png"
                 className="d-inline-block align-top"
                 alt="React Bootstrap logo"
@@ -22,8 +22,8 @@ const NavbarComponent = () => {
               >
                 <Nav.Link href="#action1">Home</Nav.Link>
                 <Nav.Link href="#action2">About</Nav.Link>
-                <Nav.Link href="#action2">
-                  Promotions <Badge bg="danger">HOT</Badge>
+                <Nav.Link href="#action2" className="txt-badge">
+                  Promotions <Badge bg="danger" className="float-badge">HOT</Badge>
                 </Nav.Link>
                 <Nav.Link href="#action2">Blogs</Nav.Link>
                 <Nav.Link href="#action2">Contact Us</Nav.Link>
@@ -51,7 +51,7 @@ const NavbarComponent = () => {
           style={{ padding: "10px 20px 10px 20px" }}
         >
           <Navbar.Brand href="#">
-            <img
+            <Image
               src="assets/logo/logo.png"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
@@ -70,7 +70,7 @@ const NavbarComponent = () => {
               textAlign: "center",
             }}
           >
-            <img
+            <Image
               src="assets/icon/menu.png"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
@@ -83,7 +83,7 @@ const NavbarComponent = () => {
               textAlign: "center",
             }}
           >
-            <img
+            <Image
               src="assets/icon/menu.png"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
@@ -97,7 +97,7 @@ const NavbarComponent = () => {
               marginRight: "50px",
             }}
           >
-            <img
+            <Image
               src="assets/icon/menu.png"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
