@@ -88,7 +88,9 @@ export default class PreviousNextMethods extends Component {
                       borderColor: category.color,
                     }}
                   >
+
                     <Card.Body>
+
                       <Card.Title>
                         <Image
                           src={"assets/food/" + category.photo}
@@ -101,7 +103,10 @@ export default class PreviousNextMethods extends Component {
                         </h6>
                         <h6>{category.quantity} items</h6>
                       </Card.Text>
+
                     </Card.Body>
+                    <div className="background-category">
+                    </div>
                   </Card>
                 </div>
               ))}

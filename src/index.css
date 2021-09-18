@@ -79,6 +79,7 @@ body {
 }
 
 .card-category {
+  position: relative;
   margin-right: 10px;
   height: 175px;
   border-radius: 8px;
@@ -199,4 +200,24 @@ h4 {
 
 .icon-primary {
   filter: invert(53%) sepia(81%) saturate(309%) hue-rotate(37deg) brightness(101%) contrast(92%);
+}
+
+.background-category {
+  position: absolute;
+  display: none;
+  max-height: 195px;
+  max-width: 300px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: url('background/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.1;
+}
+
+.card-category-desktop:hover>.background-category {
+  display: block;
 }
