@@ -89,7 +89,7 @@ const TrendingCards = () => {
             trendings.map((trending) => (
               <Col md={3} xs={12}>
                 <Card
-                  className="card-trending"
+                  className="card-trending card-trending-desktop"
                   style={{
                     backgroundColor: color[trending.category],
                     borderColor: color[trending.category],
@@ -108,6 +108,8 @@ const TrendingCards = () => {
                     </Card.Subtitle>
                     {parse(stars[trending.id])}
                   </Card.Body>
+                  <div className="background-trending">
+                  </div>
                 </Card>
               </Col>
             ))}

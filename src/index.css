@@ -129,6 +129,7 @@ h4 {
   width: '18rem';
   border-radius: '17px';
   margin-top: 30px;
+  position: relative;
 }
 
 .footer {
@@ -218,6 +219,26 @@ h4 {
   opacity: 0.1;
 }
 
+.background-trending {
+  position: absolute;
+  display: none;
+  max-height: 300px;
+  max-width: 320px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: url('background/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.1;
+}
+
 .card-category-desktop:hover>.background-category {
+  display: block;
+}
+
+.card-trending-desktop:hover>.background-trending {
   display: block;
 }
